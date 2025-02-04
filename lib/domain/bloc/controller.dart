@@ -343,6 +343,7 @@ class VideoEditorController extends ChangeNotifier {
     // check that the new params does not cause a wrong duration
     final newDuration = Duration(
         milliseconds: (videoDuration.inMilliseconds * (max - min)).toInt());
+    if (!(newDuration <= maxDuration && newDuration >= minDuration)) return;
     assert(newDuration <= maxDuration && newDuration >= minDuration,
         'Trim duration ($newDuration) cannot be bigger than $maxDuration or smaller than $minDuration');
 
