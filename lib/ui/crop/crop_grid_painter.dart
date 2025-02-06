@@ -20,8 +20,8 @@ class CropGridPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    _drawBackground(canvas, size);
     if (showGrid) {
+      _drawBackground(canvas, size);
       _drawGrid(canvas, size);
       _drawBoundaries(canvas, size);
     }
