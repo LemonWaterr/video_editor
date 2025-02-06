@@ -46,8 +46,8 @@ class CropGridPainter extends CustomPainter {
             size.width + margin * 2,
             size.height + margin * 2,
           ),
-        ),
-      //..addRRect(RRect.fromRectAndRadius(rect, Radius.circular(radius))),
+        )
+        ..addRRect(RRect.fromRectAndRadius(rect, Radius.circular(radius))),
       paint,
     );
   }
