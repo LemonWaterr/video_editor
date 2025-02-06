@@ -23,9 +23,11 @@ enum CropBoundaries {
 
 class CropGridViewer extends StatefulWidget {
   /// It is the viewer that allows you to crop the video
-  const CropGridViewer.preview(
-      {super.key, required this.controller, this.rotateCropArea = true})
-      : showGrid = false,
+  const CropGridViewer.preview({
+    super.key,
+    required this.controller,
+  })  : showGrid = false,
+        rotateCropArea = true,
         margin = EdgeInsets.zero;
 
   const CropGridViewer.edit({
